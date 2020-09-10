@@ -1,6 +1,6 @@
 export {
-    FETCH_POKEMON,
-    FETCH_POKEMON_SUCCESS,
-    FETCH_POKEMON_ERROR,
-    fetchPokemon
-} from "./pokemonActions";
+    FETCH_CHARACTERS,
+    FETCH_CHARACTERS_ERROR,
+    FETCH_CHARACTERS_SUCCESS,
+    fetchCharacter
+} from "./characterActions";
