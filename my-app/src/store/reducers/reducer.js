@@ -6,7 +6,6 @@ import {
 
 const initialState = {
     characters: [],
-    statuses: [],
     loadingCharacters: true,
     errorMessage: ""
 }
@@ -27,8 +26,7 @@ export default(state = initialState, action) => {
         case FETCH_CHARACTERS_SUCCESS:
             return {
                 ...state,
-                characters: action.payload.characters,
-                statuses: action.payload.statuses,
+                characters: action.payload,
                 loadingCharacters: false
             }
         default:

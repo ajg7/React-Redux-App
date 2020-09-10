@@ -5,8 +5,8 @@ import Characters from "./Characters";
 const CharacterList = props => {
     return (
         <>
-            {props.characters.map((character) => {
-                return <Characters key={new Date()} character={character} />;
+            {props.characters.map(character => {
+                return <Characters key={new Date()} character={character.name} status={character.status} imgs={character.image} />;
             })}
         </>
     );
@@ -14,7 +14,7 @@ const CharacterList = props => {
 
 function mapStateToProps(state) {
     return {
-        characters: state.characters
+        characters: state.characters,
     };
 }
 

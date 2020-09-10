@@ -14,20 +14,19 @@ function App(props) {
     fetchCharacter();
   }, [fetchCharacter])
 
-
+//This is used so I can see the data in the console
   useEffect(() => {
     axios.get("https://rickandmortyapi.com/api/character")
       .then(response => {
         const results = response.data.results;
         console.log(results)
         const characters = results.map(character => {
-          console.log(character.name)
           return character.name;
         })
         const statuses = results.map(character => {
-          console.log(character.status)
           return character.status;
         })
+        console.log(statuses)
       })
   })
 

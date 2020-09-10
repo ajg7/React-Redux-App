@@ -1,5 +1,9 @@
 body {
   text-align: center;
-  color: green;
+  color: blue;
   background: teal;
+}
+
+.characters {
+  border: 2px solid purple;
 }

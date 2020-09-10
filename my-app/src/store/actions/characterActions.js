@@ -12,13 +12,15 @@ export const fetchCharacter = () => {
         .get("https://rickandmortyapi.com/api/character")
           .then((response) => {
               const results = response.data.results;
-              const characters = results.map(character => {
-                return character.name;
-              })
-              const statuses = results.map(character => {
-                return character.status;
-              })
-            dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: { characters, statuses } });
+
+              // const characters = results.map(character => {
+              //   return character.name;
+              // })
+              
+              // const statuses = results.map(character => {
+              //   return character.status;
+              // })
+            dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: results });
         })
         .catch((error) => {
           dispatch({
