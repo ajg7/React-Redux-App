@@ -18,7 +18,7 @@ export const fetchCharacter = () => {
               const statuses = results.map(character => {
                 return character.status;
               })
-            dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: {characters, statuses} });
+            dispatch({ type: FETCH_CHARACTERS_SUCCESS, payload: { characters, statuses } });
         })
         .catch((error) => {
           dispatch({

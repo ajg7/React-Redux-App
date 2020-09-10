@@ -1,10 +1,10 @@
 import React from "react";
 
-const Characters = ({ character, statuses }) => {
+const Characters = ({ character, status }) => {
     return(
         <div>
             <h3>{character}</h3>
-            <h4>{statuses}</h4>
+            <h4>{status}</h4>
         </div>
     )
 }

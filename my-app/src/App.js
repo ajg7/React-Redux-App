@@ -14,6 +14,24 @@ function App(props) {
     fetchCharacter();
   }, [fetchCharacter])
 
+
+  useEffect(() => {
+    axios.get("https://rickandmortyapi.com/api/character")
+      .then(response => {
+        const results = response.data.results;
+        console.log(results)
+        const characters = results.map(character => {
+          console.log(character.name)
+          return character.name;
+        })
+        const statuses = results.map(character => {
+          console.log(character.status)
+          return character.status;
+        })
+      })
+  })
+
+
   return (
     <div className="App">
       <h1>Characters from Rick & Morty</h1>
