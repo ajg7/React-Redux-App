@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+  color: blue;
+  background: teal;
+}
+
+.characters {
+  border: 2px solid purple;
+}
